@@ -1,0 +1,111 @@
+@import './variables';
+
+#reviews{
+    padding: 10px 10px 30px 10px;
+  
+    .cards{
+      display: flex;
+      flex-direction: row;
+      width: 98%;
+  
+      .card{
+        transform: skewX(5deg);
+        box-shadow: -10px 10px 20px rgba(255, 255, 255, 0.801);
+        margin: 10px;
+        background-color: rgba(0, 23, 24, 0.911);
+        border-right: 5px solid rgb(70, 240, 240);
+        display: grid;
+        grid-template-columns: 5% 20% 20% 50% 5%;
+        grid-template-rows: 1% 20% 18% 25% 25% 10% 1%;
+        height: 200px;
+        padding-bottom: 50px;
+        transition: all 1s ease;
+        
+        .card-img{
+          grid-column: 2/3;
+          grid-row: 2/3;
+          position: relative;
+          img{
+            position: absolute;
+            border: 1px solid white;
+            border-radius: 50%;
+          width: 80%;
+          }
+          .user-name{
+            padding: 0 3px;
+            position: absolute;
+            font-size: 9px;
+            font-weight: 900;
+            top: 50%;
+            transform: translate(0%, 0%);
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+          }
+        }
+        .card-img:hover img{
+          opacity: 0.3;
+          filter: blur(3px);
+        }
+        .card-img:hover .user-name{
+          transform: translate(60%, 0) scale(1.4);
+          background-color: cornsilk;
+          color: black;
+          opacity: 1;
+        }
+        .card-text{
+          font-size: 15px;
+          grid-column: 4/5;
+          grid-row: 3/6;
+  
+        }
+        .rating{
+          grid-column: 2/4;
+          grid-row: 5/6;
+  
+        }
+      }
+
+      .card:hover{
+        transform: skewX(5deg) translateY(-10px);
+        box-shadow: -10px 10px 20px rgba(99, 211, 177, 0.801);
+      }
+    }
+  
+  }
+  
+
+@media (max-width:900px){
+  #reviews{
+    .cards{
+      .card{
+        .card-img{
+          margin-top: 20px;
+        }
+        .card-text{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:700px){
+  #reviews{
+    .cards{
+      display: flex;
+      flex-direction: column;
+      .card{
+        .card-img{
+          margin-top: 15px;
+        }
+        .card-text{
+          font-size: 16px;
+        }
+        .rating{
+          grid-row: 6/7;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import './variables';
+
+footer{
+  background-color: rgba(0, 9, 24, 0.89);
+  color: white;
+  display: flex;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 2;
+
+  .policy{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    ul{
+      list-style-type: none;
+    }
+    a{
+      text-decoration: none;
+      color: skyblue;
+    }
+    a:hover{
+      color: white;
+    }
+  }
+
+  .copyright{
+    position: absolute;
+    right: 40px;
+    top: 10px;
+
+    ul{
+      list-style-type: none;
+      li{
+        padding: 5px;
+      }
+    }  
+  }
+
+  .top-btn{
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 5;
+    opacity: 0.7;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    background-color: rgba(211, 211, 211, 0.945);
+    border: 2px solid black;
+    }
+
+  .top-btn:hover{
+    background-color: rgb(139, 255, 201);
+  }
+}

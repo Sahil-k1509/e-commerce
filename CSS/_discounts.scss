@@ -1,0 +1,282 @@
+@import './variables';
+
+#discounts{
+    padding: 8px;
+    margin-bottom: 50px;
+
+    .discount_cards{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+
+        .discount_card{
+            position: relative;
+            height: 90%;
+            border: 2px solid rgb(201, 222, 230);
+            width: 25%;
+            margin: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+
+            .front{
+                background-color: rgba(20, 20, 20, 0.932);
+                .item-image{
+                    .discounted-image{
+                        width: 100%;
+                    }
+                }
+                .details{
+                    padding-bottom: 30px;
+                }
+            }
+
+            .shutter1{
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                left: 0;
+                background-color: rgba(151, 222, 255, 0.932);
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.5s ease;
+
+                .popup-btn1{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateX(-50%);
+                    text-decoration: none;
+                    background-color: rgba(255, 255, 255, 0.897);
+                    padding: 3px 20px;
+                    color: rgba(0, 0, 0, 0.938);
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                }
+                .popup-btn1:hover{
+                    color: rgb(255, 255, 255);
+                    background-color: rgba(0, 29, 29, 0.911);
+                }
+            }
+
+            .shutter2{
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                left: 0;
+                background-color: rgba(72, 197, 255, 0.925);
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.5s ease;
+
+                .popup-btn2{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateX(-50%);
+                    text-decoration: none;
+                    background-color: rgba(255, 255, 255, 0.897);
+                    padding: 3px 20px;
+                    color: rgb(0, 0, 0);
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                }
+                .popup-btn2:hover{
+                    color: rgb(255, 255, 255);
+                    background-color: rgba(0, 29, 29, 0.911);
+                }
+            }
+            
+            .shutter3{
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                left: 0;
+                background-color: rgba(0, 114, 167, 0.938);
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.5s ease;
+
+                .popup-btn3{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateX(-50%);
+                    text-decoration: none;
+                    background-color: rgba(255, 255, 255, 0.897);
+                    padding: 3px 20px;
+                    color: rgb(0, 0, 0);
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                }
+                .popup-btn3:hover{
+                    color: rgb(255, 255, 255);
+                    background-color: rgba(0, 29, 29, 0.911);
+                }
+            }
+            
+            
+        }
+        .card1:hover .shutter1{
+            height: 100%;
+            transform: translateY(-100%);
+            visibility: visible;
+            opacity: 1;
+        }
+        .card2:hover .shutter2{
+            height: 100%;
+            transform: translateY(-100%);
+            visibility: visible;
+            opacity: 1;
+        }
+        .card3:hover .shutter3{
+            height: 100%;
+            transform: translateY(-100%);
+            visibility: visible;
+            opacity: 1;
+        }   
+    }
+}
+
+
+.popup{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.904);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+
+    &:target{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .content{
+        position: absolute;
+        width: 75%;
+        height: 75%;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        padding: 10px;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255, 255, 255);
+        display: table;
+
+        .left{
+            width: 33.3333%;
+            display: table-cell;
+            vertical-align: middle;
+            .popup-img{
+                display: block;
+                width: 80%;
+            }
+        }
+        .right{
+            width: 66.6667%;
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            .popup-heading{
+                position: absolute;
+                top: 10%;
+                color: black;
+            }
+            .popup-terms{
+                top: 20%;
+                position: absolute;
+                color: rgb(60, 105, 163);
+            }
+            .popup-text{
+                top: 30%;
+                width: 60%;
+                position: absolute;
+            }
+            .order-btn{
+                padding: 2px 20px;
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                border-radius: 20px;
+                top: 69%;
+                background-color: rgb(102, 255, 204);
+                transition-property: background, transform, color, box-shadow;
+                transition-duration: 1s;
+            }
+            .order-btn:hover{
+                transform: translateY(-2px);
+                background-color: black;
+                color: rgb(102, 255, 204);
+                box-shadow: 0 10px 10px black;
+            }
+            .popup-close{
+                position: absolute;
+                top: 5%;
+                right: 5%;
+                text-decoration: none;
+                font-size: 1.2rem;
+                padding: 5px 10px;
+                border-radius: 100px;
+                color: rgb(102, 255, 204);
+                border: 2px solid rgb(102, 255, 204);
+                font-weight: 900;
+                transition-property: background, transform, color, box-shadow;
+                transition-duration: 1s;    
+            }
+            .popup-close:hover{
+                background-color: rgb(102, 255, 204);
+                transform: translate(0, -5px);
+                box-shadow: 0 10px 20px black;
+                color: black;
+            }
+        }
+    }
+}
+
+@media (max-width:1080px){
+    .popup{
+        .content{
+            .right{
+                .popup-text{width: 80%;}
+                .order-btn{top: 85%;}
+            }
+        }
+    }
+}
+
+
+@media (max-width:700px){
+    #discounts{
+        .discount_cards{
+            display: flex;
+            flex-direction: column;
+            .discount_card{
+                width: 75%;
+            }
+        }
+    }
+
+    .popup{
+        .content{
+            .left{
+                width: 40%;
+            }
+            .right{
+                width: 60%;
+                .popup-text{width: 90%; text-align: justify; font-size: 13px;}
+                .popup-close{top: 5px;}
+                .order-btn{top: 85%;}
+            }
+        }
+    }
+}

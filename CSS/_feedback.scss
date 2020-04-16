@@ -1,0 +1,67 @@
+@import './variables';
+
+#feedback{
+    background-image: linear-gradient(rgba($color-black, 0.767), rgba($color-black, 0.322)), linear-gradient(rgba(66, 218, 238, 0.575),rgba(83, 255, 135, 0.699) ),
+                       url('../images/forest.jpg') ;
+    background-size: cover;
+    padding: 8px;
+  
+    form{
+      padding: 30px;
+       div{
+        padding-top: 1rem;
+        label{
+            color: $color-white;
+            margin-left: 2rem;
+          }
+        #fname{
+            margin-left: 1rem;
+            color: $color-white;
+            background-color: rgba(8, 8, 8, 0.774);
+            padding: 2px 8px;
+            border: none;
+            border-bottom: 2px solid rgb(0, 81, 255);
+          }
+        #lname{
+            margin-left: 1.4rem;
+            color: $color-white;
+            background-color: rgba(8, 8, 8, 0.774);
+            padding: 2px 8px;
+            border: none;
+            border-bottom: 2px solid rgb(43, 255, 0);
+          }
+        #review{
+            margin-left: 6rem;
+            color: $color-white;
+            background-color: rgba(8, 8, 8, 0.774);
+            padding: 2px 8px;
+            border: none;
+            border-bottom: 2px solid rgb(255, 0, 0);
+          }
+        
+        #submit{
+            padding: 3px 20px;
+            margin-left: 15rem;
+            border-radius: 30px;
+            color: $color-white;
+            border: none;
+            background-color: black;
+            border: 2px solid $color-white;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: all 1s ease;
+          }
+  
+       #submit:hover{
+           color: $color-black;
+           background-color: $color-white;
+           border: 2px solid $color-black;
+       }
+      
+        
+  
+        }
+    }
+  }
+  
+  

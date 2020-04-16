@@ -1,0 +1,158 @@
+#hot-list{
+    padding: 10px;
+    padding-bottom: 30px;
+    .demanded-cards{
+        display: grid;
+        padding-top: 20px;
+        margin-top: 30px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 50% 50%;
+        
+        .demanded-card{
+            border: 2px solid rgb(19, 92, 110);
+            background: rgba(17, 38, 43, 0.911);
+            margin: 10px;
+            position: relative;
+            border-radius: 9px;
+
+            hr{
+                opacity: 0.4;
+            }
+
+            .shutter-dem{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 9;
+                border-radius: 9px;
+                opacity: 1;
+                transition: all 1.5s ease;
+            }   
+
+            .image-container{
+                padding-top: 10px;
+                text-align: center;
+                border-radius: 50%;
+                .image_demanded{
+                    width: 50%;
+                    height: 150px;
+                    border: 1.5px solid white;
+                    border-radius: 50%;
+
+                }
+            }
+            .name-demanded{
+                text-align: center;
+                padding: 5px;
+            }
+            .rating-demanded{
+                padding: 5px;
+                padding-left: 15px;
+                span{
+                    color: yellow;
+                }
+            }
+            .bought-demanded{
+                padding: 5px;
+                padding-left: 15px;
+                span{
+                    color: rgb(7, 221, 0);
+                }
+            }
+            .review-demanded{
+                padding: 5px;
+                padding-bottom: 100px;
+                color: rgb(230, 192, 255);
+                text-align: justify;
+                font-size: 13px;
+                height: 10vh;
+            }
+        }
+    }
+
+    .item1{ grid-area: 1/1/2/2; }
+    .item2{ grid-area: 1/2/2/3; }
+    .item3{ grid-area: 1/3/2/4; }
+    .item4{ grid-area: 1/4/2/5; }
+    .item5{ grid-area: 2/1/3/2; }
+    .item6{ grid-area: 2/2/3/3; }
+    .item7{ grid-area: 2/3/3/4; }
+    .item8{ grid-area: 2/4/3/5; }
+
+    .shutter1-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter2-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter3-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter4-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter5-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter6-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter7-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter8-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+
+    .item1:hover .shutter1-demanded{height: 0; opacity: 0;}
+    .item2:hover .shutter2-demanded{height: 0; opacity: 0;}
+    .item3:hover .shutter3-demanded{height: 0; opacity: 0;}
+    .item4:hover .shutter4-demanded{height: 0; opacity: 0;}
+    .item5:hover .shutter5-demanded{height: 0; opacity: 0;}
+    .item6:hover .shutter6-demanded{height: 0; opacity: 0;}
+    .item7:hover .shutter7-demanded{height: 0; opacity: 0;}
+    .item8:hover .shutter8-demanded{height: 0; opacity: 0;}
+}
+
+
+@media (max-width:700px){
+    #hot-list{
+        .demanded-cards{
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 25% 25% 25%; 
+        }
+        
+    .item1{ grid-area: 1/1/2/2; }
+    .item2{ grid-area: 1/2/2/3; }
+    .item3{ grid-area: 2/1/3/2; }
+    .item4{ grid-area: 2/2/3/3; }
+    .item5{ grid-area: 3/1/4/2; }
+    .item6{ grid-area: 3/2/4/3; }
+    .item7{ grid-area: 4/1/5/2; }
+    .item8{ grid-area: 4/2/5/3; }
+    
+    .shutter1-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter2-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter3-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter4-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter5-demanded{ background: linear-gradient( rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter6-demanded{ background: linear-gradient(rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter8-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter7-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    }
+}
+
+
+@media (max-width:390px){
+    #hot-list{
+        .demanded-cards{
+            grid-template-columns: 100%;
+            grid-template-rows: 12% 12% 12% 12% 12% 12% 12% 12%; 
+        }
+        
+    .item1{ grid-area: 1/1/2/2; }
+    .item2{ grid-area: 2/1/3/2; }
+    .item3{ grid-area: 3/1/4/2; }
+    .item4{ grid-area: 4/1/5/2; }
+    .item5{ grid-area: 5/1/6/2; }
+    .item6{ grid-area: 6/1/7/2; }
+    .item7{ grid-area: 7/1/8/2; }
+    .item8{ grid-area: 8/1/9/2; }
+    
+    .shutter1-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter2-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter3-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter4-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter5-demanded{ background: linear-gradient( rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    .shutter6-demanded{ background: linear-gradient(rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter8-demanded{ background: linear-gradient( rgba(111, 255, 200, 0.877), rgba(132, 226, 255, 0.842));}
+    .shutter7-demanded{ background: linear-gradient(rgba(141, 231, 253, 0.87), rgba(73, 255, 155, 0.774));}
+    }
+}
+
