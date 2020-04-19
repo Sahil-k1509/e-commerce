@@ -1126,7 +1126,7 @@ footer .top-btn:hover {
   top: 100%;
   width: 100%;
   left: 0;
-  background-color: rgba(151, 222, 255, 0.932);
+  background-color: rgba(0, 0, 0, 0.632);
   height: 0;
   visibility: hidden;
   opacity: 0;
@@ -1158,7 +1158,7 @@ footer .top-btn:hover {
   top: 100%;
   width: 100%;
   left: 0;
-  background-color: rgba(72, 197, 255, 0.925);
+  background-color: rgba(0, 0, 0, 0.632);
   height: 0;
   visibility: hidden;
   opacity: 0;
@@ -1190,7 +1190,7 @@ footer .top-btn:hover {
   top: 100%;
   width: 100%;
   left: 0;
-  background-color: rgba(0, 114, 167, 0.938);
+  background-color: rgba(0, 0, 0, 0.632);
   height: 0;
   visibility: hidden;
   opacity: 0;
